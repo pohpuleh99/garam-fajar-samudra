@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0a1628"/>
+  <rect x="0" y="400" width="800" height="200" fill="#0f4c81" opacity="0.3"/>
+  <line x1="100" y1="420" x2="100" y2="380" stroke="#e8a838" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="400" x2="200" y2="350" stroke="#e8a838" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="430" x2="300" y2="370" stroke="#e8a838" stroke-width="2" opacity="0.35"/>
+  <text x="400" y="300" font-family="Georgia" font-size="20" fill="#e8a838" text-anchor="middle" opacity="0.5">Tambak Garam Peh Pulo</text>
+</svg>
