@@ -1,0 +1,5 @@
+# https://fajarsamudra.github.io/
+User-agent: *
+Allow: /
+
+Sitemap: https://fajarsamudra.github.io/sitemap.xml

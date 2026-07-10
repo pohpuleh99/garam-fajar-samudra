@@ -1,0 +1,17 @@
+{
+  "name": "KUB Fajar Samudra",
+  "short_name": "Fajar Samudra",
+  "description": "Produsen garam tradisional berkualitas dari Pesisir Selatan Blitar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#15607a",
+  "theme_color": "#15607a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
