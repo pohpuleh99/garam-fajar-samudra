@@ -45,7 +45,7 @@
   margin-bottom: 1.35rem;
   letter-spacing: 0;
   line-height: 1.02;
-  font-size: 4rem;
+  font-size: 4.45rem;
   text-shadow: 0 16px 42px rgba(0,0,0,0.28);
 }
 
@@ -56,7 +56,7 @@
 
 .hero__subtitle {
   color: rgba(255,255,255,0.86);
-  font-size: 1.05rem;
+  font-size: 1.16rem;
   line-height: 1.8;
   margin-bottom: 2.5rem;
   max-width: 520px;
@@ -85,7 +85,7 @@
 
 .hero__stat-value {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--color-accent-soft);
   letter-spacing: 0;
@@ -93,7 +93,7 @@
 
 .hero__stat-label {
   color: rgba(255,255,255,0.55);
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0.25rem;
@@ -105,10 +105,10 @@
     padding: 7rem 0 7rem;
   }
   .hero__title {
-    font-size: 3.1rem;
+    font-size: 3.3rem;
   }
   .hero__subtitle {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     margin-bottom: 2rem;
   }
   .hero__stats {
@@ -134,7 +134,7 @@
   }
 
   .hero__title {
-    font-size: 2.65rem;
+    font-size: 2.8rem;
   }
 
   .hero__subtitle {

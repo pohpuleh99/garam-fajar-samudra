@@ -55,12 +55,12 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1.65rem;
 }
 
 .product-card__title {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.52rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   color: var(--color-primary);
@@ -76,7 +76,7 @@
   background: rgba(253,209,134,0.18);
   border: 1px solid rgba(121,89,26,0.18);
   color: var(--color-accent);
-  font-size: 0.7rem;
+  font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -84,7 +84,7 @@
 }
 
 .product-card__description {
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   color: var(--color-text-light);
   margin-bottom: 1.5rem;
   line-height: 1.65;
@@ -92,7 +92,7 @@
 
 .product-card__price {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.42rem;
   font-weight: 700;
   color: var(--color-accent);
   margin-top: auto;

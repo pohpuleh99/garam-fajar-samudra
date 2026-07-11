@@ -51,6 +51,7 @@ body {
   font-family: var(--font-primary);
   color: var(--color-text);
   background-color: var(--color-bg);
+  font-size: 1.03rem;
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -86,10 +87,10 @@ h1, h2, h3, h4 {
   letter-spacing: 0;
 }
 
-h1 { font-size: 4rem; }
-h2 { font-size: 3rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.05rem; }
+h1 { font-size: 4.35rem; }
+h2 { font-size: 3.25rem; }
+h3 { font-size: 1.65rem; }
+h4 { font-size: 1.15rem; }
 
 :focus-visible {
   outline: 3px solid rgba(253, 209, 134, 0.8);
@@ -129,9 +130,9 @@ h4 { font-size: 1.05rem; }
     --space-2xl: 5rem;
   }
 
-  h1 { font-size: 3.25rem; }
-  h2 { font-size: 2.25rem; }
-  h3 { font-size: 1.35rem; }
+  h1 { font-size: 3.45rem; }
+  h2 { font-size: 2.55rem; }
+  h3 { font-size: 1.45rem; }
 }
 
 @media (max-width: 520px) {
@@ -143,9 +144,11 @@ h4 { font-size: 1.05rem; }
   }
 
   body {
+    font-size: 1rem;
     line-height: 1.65;
   }
 
-  h1 { font-size: 2.55rem; }
-  h2 { font-size: 1.9rem; }
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 2.15rem; }
+  h3 { font-size: 1.35rem; }
 }

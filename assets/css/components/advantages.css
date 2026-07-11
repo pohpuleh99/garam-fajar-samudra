@@ -54,14 +54,14 @@
 
 .advantage-card__title {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-white);
   margin-bottom: 0.75rem;
 }
 
 .advantage-card__text {
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   color: rgba(255,255,255,0.72);
   line-height: 1.7;
 }
