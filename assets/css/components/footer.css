@@ -4,7 +4,7 @@
   position: relative;
   z-index: 2;
   margin-top: calc(var(--wave-overlap) * -1);
-  padding: calc(5.5rem + var(--wave-overlap) + var(--wave-gap)) 0 1.75rem;
+  padding: calc(var(--wave-overlap) + var(--wave-content-gap)) 0 1.75rem;
 }
 
 .footer__grid {
@@ -16,21 +16,21 @@
 
 .footer__brand {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: var(--color-white);
   margin-bottom: 0.65rem;
 }
 
 .footer__description {
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   line-height: 1.7;
-  max-width: 380px;
+  max-width: 430px;
 }
 
 .footer__heading {
   font-family: var(--font-primary);
-  font-size: 0.88rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--color-accent-soft);
   margin-bottom: 0.9rem;
@@ -45,7 +45,7 @@
 
 .footer__link {
   color: rgba(255,255,255,0.6);
-  font-size: 0.96rem;
+  font-size: 1.1rem;
   transition: color var(--transition);
 }
 
@@ -59,7 +59,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   flex-wrap: wrap;
   gap: var(--space-sm);
 }
