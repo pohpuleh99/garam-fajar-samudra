@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f4c81"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#aboutBg)"/>
+  <ellipse cx="250" cy="400" rx="200" ry="120" fill="#1a6bb5" opacity="0.2"/>
+  <g opacity="0.3">
+    <path d="M50 420 Q200 300 350 420" stroke="#e8a838" stroke-width="2" fill="none"/>
+    <path d="M100 440 Q250 330 400 440" stroke="#e8a838" stroke-width="1.5" fill="none"/>
+  </g>
+  <rect x="150" y="150" width="12" height="80" rx="6" fill="#e8a838" opacity="0.4"/>
+  <rect x="200" y="130" width="10" height="70" rx="5" fill="#e8a838" opacity="0.3"/>
+  <rect x="250" y="160" width="14" height="90" rx="7" fill="#e8a838" opacity="0.35"/>
+  <rect x="300" y="140" width="8" height="60" rx="4" fill="#e8a838" opacity="0.25"/>
+  <text x="550" y="260" font-family="Georgia, serif" font-size="28" fill="#e8a838" text-anchor="middle" opacity="0.6">TENTANG</text>
+  <text x="550" y="290" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" opacity="0.4">Peh Pulo · Sumbersih · Panggungrejo</text>
+</svg>

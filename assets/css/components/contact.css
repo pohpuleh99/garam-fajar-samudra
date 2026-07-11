@@ -1,27 +1,32 @@
 .contact__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 2rem;
+  align-items: stretch;
 }
 
 .contact__info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 1.25rem;
 }
 
 .contact__item {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-sm);
+  gap: 1rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 
 .contact__item-icon {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  background: rgba(212, 160, 90, 0.1);
-  border-radius: var(--radius-sm);
+  background: var(--color-sand);
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,26 +34,29 @@
 }
 
 .contact__item-title {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
 }
 
 .contact__item-text {
   font-size: 0.95rem;
   color: var(--color-text-light);
+  line-height: 1.55;
 }
 
 .contact__social {
   display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-sm);
+  gap: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 .contact__social-link {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
-  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,28 +71,41 @@
 }
 
 .contact__map {
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  min-height: 350px;
+  box-shadow: var(--shadow-sm);
+  min-height: 100%;
+  background: var(--color-sand);
+  border: 1px solid var(--color-border);
 }
 
 .contact__map iframe {
   width: 100%;
   height: 100%;
-  min-height: 350px;
+  min-height: 430px;
   border: 0;
 }
 
 @media (max-width: 768px) {
   .contact__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
+    gap: 1.5rem;
   }
   .contact__map {
     min-height: 250px;
   }
   .contact__map iframe {
-    min-height: 250px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact__item {
+    padding: 0.9rem;
+  }
+
+  .contact__item-icon {
+    width: 42px;
+    height: 42px;
   }
 }
