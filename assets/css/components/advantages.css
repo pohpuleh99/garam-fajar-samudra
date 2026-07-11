@@ -1,42 +1,79 @@
 .advantages__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .advantage-card {
+  position: relative;
   text-align: center;
-  padding: var(--space-lg) var(--space-md);
-  background: rgba(255,255,255,0.04);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: all var(--transition-smooth);
+  padding: 2rem;
+  background: rgba(249,249,255,0.06);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(216,227,250,0.12);
+  min-height: 100%;
+  backdrop-filter: blur(8px);
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  overflow: hidden;
+}
+
+.advantage-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 0;
+  background: rgba(255,255,255,0.06);
+  border-radius: inherit;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.advantage-card:hover::before {
+  width: 100%;
+}
+
+.advantage-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .advantage-card:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateY(-6px);
   border-color: rgba(255,255,255,0.18);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
 
 .advantage-card__icon {
   width: 64px;
   height: 64px;
-  margin: 0 auto var(--space-sm);
-  color: var(--color-accent);
+  margin: 0 auto 1.5rem;
+  color: var(--color-accent-soft);
+  padding: 0.8rem;
+  border: 1px solid rgba(253,209,134,0.45);
+  border-radius: 999px;
 }
 
 .advantage-card__title {
-  font-family: var(--font-primary);
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--color-white);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .advantage-card__text {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.6;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .advantages__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .advantages__grid {
+    grid-template-columns: 1fr;
+  }
 }
