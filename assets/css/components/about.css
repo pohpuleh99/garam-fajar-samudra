@@ -1,7 +1,7 @@
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
   align-items: center;
 }
 
@@ -13,13 +13,15 @@
 
 .about__image img {
   width: 100%;
-  height: 400px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
 .about__text p {
   color: var(--color-text-light);
   margin-bottom: var(--space-sm);
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .about__text p:last-child {

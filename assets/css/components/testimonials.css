@@ -7,8 +7,15 @@
 .testimonial-card {
   background: var(--color-white);
   padding: var(--space-md);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04);
+  transition: all var(--transition-smooth);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .testimonial-card__stars {

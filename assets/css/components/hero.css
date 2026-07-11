@@ -3,8 +3,25 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: var(--color-bg-dark);
   overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(14,37,51,0.92) 0%, rgba(14,37,51,0.55) 100%);
 }
 
 .hero .container {
@@ -19,33 +36,25 @@
   margin: 0 auto;
 }
 
-.hero__badge {
-  display: inline-block;
-  padding: 0.4rem 1.2rem;
-  background: rgba(212, 160, 90, 0.12);
-  border: 1px solid rgba(212, 160, 90, 0.25);
-  color: var(--color-accent);
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 50px;
-  margin-bottom: var(--space-md);
-}
-
 .hero__title {
   color: var(--color-white);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  font-size: clamp(2.75rem, 7.5vw, 5.5rem);
 }
 
 .hero__title span {
   color: var(--color-accent);
+  display: block;
 }
 
 .hero__subtitle {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.65);
   font-size: 1.15rem;
   line-height: 1.8;
-  margin-bottom: var(--space-md);
-  max-width: 550px;
+  margin-bottom: var(--space-lg);
+  max-width: 520px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -61,22 +70,39 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
-  margin-top: var(--space-xl);
+  margin-top: var(--space-2xl);
   padding-top: var(--space-lg);
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .hero__stat-value {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--color-accent);
+  letter-spacing: -0.02em;
 }
 
 .hero__stat-label {
   color: rgba(255,255,255,0.55);
   font-size: 0.9rem;
   margin-top: 0.25rem;
+}
+
+.hero__wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.hero__wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {

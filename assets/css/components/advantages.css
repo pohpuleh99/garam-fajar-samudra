@@ -6,16 +6,18 @@
 
 .advantage-card {
   text-align: center;
-  padding: var(--space-md) var(--space-sm);
-  background: rgba(255,255,255,0.05);
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all var(--transition);
+  padding: var(--space-lg) var(--space-md);
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all var(--transition-smooth);
 }
 
 .advantage-card:hover {
   background: rgba(255,255,255,0.08);
-  transform: translateY(-2px);
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 }
 
 .advantage-card__icon {

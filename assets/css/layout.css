@@ -10,32 +10,52 @@
 }
 
 .section {
-  padding: var(--space-xl) 0;
+  padding: var(--space-2xl) 0;
+  position: relative;
 }
 
 .section__header {
   text-align: center;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .section__label {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--color-primary);
-  letter-spacing: 1px;
-  margin-bottom: var(--space-xs);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.section__label::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.section--dark .section__label {
+  color: var(--color-accent);
 }
 
 .section__title {
   margin-bottom: var(--space-sm);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section__description {
   color: var(--color-text-light);
   max-width: 600px;
   margin: 0 auto;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .section--alt {
@@ -54,4 +74,66 @@
 
 .section--dark .section__description {
   color: rgba(255,255,255,0.7);
+}
+
+.section__wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section__wave--top {
+  top: -1px;
+}
+
+.section__wave--bottom {
+  bottom: -1px;
+}
+
+.section__wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wave {
+  overflow: hidden;
+  will-change: transform, opacity;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.wave.is-visible {
+  opacity: 1;
+}
+
+.wave__path {
+  animation: waveDrift 8s ease-in-out infinite alternate;
+}
+
+.wave--b .wave__path {
+  animation-duration: 10s;
+  animation-delay: -2s;
+}
+
+.wave--c .wave__path {
+  animation-duration: 7s;
+  animation-delay: -4s;
+}
+
+.wave--d .wave__path {
+  animation-duration: 9s;
+  animation-delay: -1s;
+}
+
+@keyframes waveDrift {
+  0% {
+    transform: translateX(-10px) scaleX(1.02);
+  }
+  100% {
+    transform: translateX(10px) scaleX(0.98);
+  }
 }

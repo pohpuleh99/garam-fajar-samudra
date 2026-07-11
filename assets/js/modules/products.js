@@ -36,9 +36,11 @@ var Products = (function () {
     var grid = document.getElementById('productGrid');
     if (!grid) return;
 
-    data.forEach(function (product) {
+    var staggerClasses = ['stagger-1', 'stagger-2', 'stagger-3', 'stagger-4'];
+
+    data.forEach(function (product, index) {
       var card = document.createElement('div');
-      card.className = 'product-card animate';
+      card.className = 'product-card animate ' + (staggerClasses[index] || '');
       card.setAttribute('role', 'listitem');
       card.innerHTML =
         '<img class="product-card__image" src="' + product.image + '" alt="' + product.name + ' - ' + product.subtitle + '" loading="lazy">' +
