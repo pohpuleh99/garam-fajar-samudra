@@ -8,7 +8,27 @@
       </p>
     </div>
 
-    <div class="products__grid" id="productGrid" role="list">
+    <div class="products-carousel animate" id="productsCarousel" role="region" aria-roledescription="carousel" aria-label="Katalog produk garam">
+      <div class="products-carousel__frame">
+        <button class="products-carousel__control products-carousel__control--prev" id="productPrev" type="button" aria-label="Tampilkan produk sebelumnya" aria-controls="productTrack">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div class="products-carousel__viewport" id="productsViewport" tabindex="0">
+          <div class="products-carousel__track" id="productTrack" role="list"></div>
+        </div>
+
+        <button class="products-carousel__control products-carousel__control--next" id="productNext" type="button" aria-label="Tampilkan produk berikutnya" aria-controls="productTrack">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="products-carousel__dots" id="productDots" aria-label="Pilih posisi produk"></div>
+      <p class="sr-only" id="productCarouselStatus" aria-live="polite" aria-atomic="true"></p>
     </div>
   </div>
 </section>
