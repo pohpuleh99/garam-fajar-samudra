@@ -21,6 +21,7 @@ var Products = (function () {
     pointerId: null,
     dragStartX: 0,
     dragOffset: 0,
+    dragFrame: null,
     transitionTimer: null,
     resizeTimer: null,
     resizeObserver: null,
@@ -168,10 +169,15 @@ var Products = (function () {
     state.track.style.transform = 'translate3d(' + getTrackPosition(state.currentIndex) + 'px, 0, 0)';
   }
 
-  function jumpToCurrentPosition() {
+  function jumpToCurrentPosition(syncUI) {
+    state.track.classList.add('products-carousel__track--jumping');
     state.track.style.transition = 'none';
     setTrackPosition();
+    if (syncUI) {
+      updateUI(false);
+    }
     state.track.offsetHeight;
+    state.track.classList.remove('products-carousel__track--jumping');
     state.track.style.transition = '';
   }
 
@@ -260,19 +266,23 @@ var Products = (function () {
       didJump = true;
     }
 
-    if (didJump) {
-      jumpToCurrentPosition();
-    }
+    return didJump;
   }
 
   function completeTransition() {
+    var didJump;
+
     if (!state.isAnimating) return;
 
     window.clearTimeout(state.transitionTimer);
     state.transitionTimer = null;
-    normalizeIndex();
+    didJump = normalizeIndex();
     state.isAnimating = false;
-    updateUI(false);
+    if (didJump) {
+      jumpToCurrentPosition(true);
+    } else {
+      updateUI(false);
+    }
 
     if (state.pendingMoves.length) {
       window.requestAnimationFrame(function () {
@@ -320,6 +330,10 @@ var Products = (function () {
     state.pointerId = event.pointerId;
     state.dragStartX = event.clientX;
     state.dragOffset = 0;
+    if (state.dragFrame !== null) {
+      window.cancelAnimationFrame(state.dragFrame);
+      state.dragFrame = null;
+    }
     state.track.style.transition = 'none';
     state.viewport.classList.add('products-carousel__viewport--dragging');
 
@@ -328,11 +342,18 @@ var Products = (function () {
     }
   }
 
+  function applyDragPosition() {
+    state.dragFrame = null;
+    state.track.style.transform = 'translate3d(' + (getTrackPosition(state.currentIndex) + state.dragOffset) + 'px, 0, 0)';
+  }
+
   function drag(event) {
     if (!state.isDragging || event.pointerId !== state.pointerId) return;
 
     state.dragOffset = event.clientX - state.dragStartX;
-    state.track.style.transform = 'translate3d(' + (getTrackPosition(state.currentIndex) + state.dragOffset) + 'px, 0, 0)';
+    if (state.dragFrame === null) {
+      state.dragFrame = window.requestAnimationFrame(applyDragPosition);
+    }
 
     if (Math.abs(state.dragOffset) > 8) {
       event.preventDefault();
@@ -344,6 +365,11 @@ var Products = (function () {
     var direction;
 
     if (!state.isDragging || event.pointerId !== state.pointerId) return;
+
+    if (state.dragFrame !== null) {
+      window.cancelAnimationFrame(state.dragFrame);
+      applyDragPosition();
+    }
 
     if (state.viewport.hasPointerCapture && state.viewport.hasPointerCapture(event.pointerId)) {
       state.viewport.releasePointerCapture(event.pointerId);
@@ -396,12 +422,19 @@ var Products = (function () {
       var activeIndex = getActiveIndex();
 
       window.clearTimeout(state.transitionTimer);
+      if (state.dragFrame !== null) {
+        window.cancelAnimationFrame(state.dragFrame);
+        state.dragFrame = null;
+      }
       state.pendingMoves = [];
       state.isAnimating = false;
+      state.isDragging = false;
+      state.pointerId = null;
+      state.dragOffset = 0;
+      state.viewport.classList.remove('products-carousel__viewport--dragging');
       state.currentIndex = state.cloneCount + activeIndex;
       measure();
-      jumpToCurrentPosition();
-      updateUI(false);
+      jumpToCurrentPosition(true);
     }, 120);
   }
 
@@ -450,8 +483,7 @@ var Products = (function () {
 
     window.requestAnimationFrame(function () {
       measure();
-      jumpToCurrentPosition();
-      updateUI(false);
+      jumpToCurrentPosition(true);
     });
   }
 
