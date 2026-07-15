@@ -5,21 +5,41 @@
 }
 
 .advantage-card {
+  position: relative;
   text-align: center;
   padding: 2rem;
   background: rgba(249,249,255,0.06);
   border-radius: var(--radius-xl);
   border: 1px solid rgba(216,227,250,0.12);
-  transition: all var(--transition-smooth);
   min-height: 100%;
   backdrop-filter: blur(8px);
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  overflow: hidden;
+}
+
+.advantage-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 0;
+  background: rgba(255,255,255,0.06);
+  border-radius: inherit;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.advantage-card:hover::before {
+  width: 100%;
+}
+
+.advantage-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .advantage-card:hover {
-  background: rgba(249,249,255,0.1);
-  transform: translateY(-6px);
   border-color: rgba(255,255,255,0.18);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
 
 .advantage-card__icon {
