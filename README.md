@@ -13,7 +13,7 @@ Company profile website for **Kelompok Usaha Bersama (KUB) Fajar Samudra**, a tr
 - Scroll animations using Intersection Observer
 - WhatsApp click-to-chat
 - FAQ accordion without any library
-- Product cards rendered from a JavaScript data array
+- Responsive infinite product carousel backed by a separate JavaScript data file
 - SEO tags, Open Graph, sitemap, and robots.txt
 
 ## Project Structure
@@ -52,9 +52,11 @@ garam-fajar-samudra/
 │   │       └── footer.css
 │   ├── js/
 │   │   ├── main.js             orchestrator
+│   │   ├── data/
+│   │   │   └── products.js     product catalog data
 │   │   └── modules/
 │   │       ├── loader.js       fetches and injects HTML partials
-│   │       ├── products.js     product data and grid rendering
+│   │       ├── products.js     carousel rendering and interaction
 │   │       ├── header.js       scroll effect and mobile nav
 │   │       ├── faq.js          accordion toggle
 │   │       ├── animations.js   Intersection Observer
@@ -78,6 +80,8 @@ python3 -m http.server 8080
 ```
 
 Open `http://localhost:8080` in your browser. An HTTP server is required because HTML partials are loaded with `fetch()`.
+
+Add or update catalog items in `assets/js/data/products.js`.
 
 ## Deployment
 
