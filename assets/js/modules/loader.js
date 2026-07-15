@@ -4,12 +4,12 @@ var Loader = (function () {
   var partials = [
     { id: 'header', url: 'partials/header.html' },
     { id: 'hero', url: 'partials/hero.html' },
-    { id: 'about', url: 'partials/about.html' },
-    { id: 'products', url: 'partials/products.html?v=20260715-1' },
+    { id: 'about', url: 'partials/about.html?v=20260715-2' },
+    { id: 'products', url: 'partials/products.html?v=20260715-2' },
     { id: 'advantages', url: 'partials/advantages.html' },
-    { id: 'gallery', url: 'partials/gallery.html' },
+    { id: 'gallery', url: 'partials/gallery.html?v=20260715-2' },
     { id: 'testimonials', url: 'partials/testimonials.html' },
-    { id: 'faq', url: 'partials/faq.html' },
+    { id: 'faq', url: 'partials/faq.html?v=20260715-2' },
     { id: 'contact', url: 'partials/contact.html' },
     { id: 'footer', url: 'partials/footer.html' }
   ];
