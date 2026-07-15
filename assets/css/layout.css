@@ -24,14 +24,14 @@
 :root {
   --wave-height: 118px;
   --wave-overlap: 72px;
-  --wave-gap: 2.25rem;
+  --wave-content-gap: 4.75rem;
 }
 
 #tentang,
 #keunggulan,
 #galeri {
   margin-top: calc(var(--wave-overlap) * -1);
-  padding-top: calc(7rem + var(--wave-overlap) + var(--wave-gap));
+  padding-top: calc(var(--wave-overlap) + var(--wave-content-gap));
   overflow: visible;
 }
 
@@ -90,7 +90,7 @@
 #produk,
 #keunggulan,
 #kontak {
-  padding-bottom: 10.5rem;
+  padding-bottom: 9rem;
 }
 
 .section__header {
@@ -103,12 +103,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 800;
   color: var(--color-accent);
   letter-spacing: 0;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
 }
 
 .section__label::before {
@@ -159,23 +159,27 @@
   :root {
     --wave-height: 94px;
     --wave-overlap: 56px;
-    --wave-gap: 1.75rem;
+    --wave-content-gap: 3.75rem;
   }
 
   #tentang,
   #keunggulan,
   #galeri {
-    padding-top: calc(5rem + var(--wave-overlap) + var(--wave-gap));
+    padding-top: calc(var(--wave-overlap) + var(--wave-content-gap));
   }
 
   #produk,
   #keunggulan,
   #kontak {
-    padding-bottom: 8rem;
+    padding-bottom: 7rem;
   }
 
   .section__header {
     margin-bottom: 3rem;
+  }
+
+  .section__label {
+    font-size: 1.02rem;
   }
 }
 
@@ -191,19 +195,19 @@
   :root {
     --wave-height: 74px;
     --wave-overlap: 44px;
-    --wave-gap: 1.35rem;
+    --wave-content-gap: 3.25rem;
   }
 
   #tentang,
   #keunggulan,
   #galeri {
-    padding-top: calc(4.5rem + var(--wave-overlap) + var(--wave-gap));
+    padding-top: calc(var(--wave-overlap) + var(--wave-content-gap));
   }
 
   #produk,
   #keunggulan,
   #kontak {
-    padding-bottom: 6.75rem;
+    padding-bottom: 6rem;
   }
 
   .section__header {
@@ -217,5 +221,9 @@
 
   .section__description {
     font-size: 1.02rem;
+  }
+
+  .section__label {
+    font-size: 0.95rem;
   }
 }
