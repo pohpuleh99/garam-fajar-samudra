@@ -10,8 +10,8 @@ var Loader = (function () {
     { id: 'gallery', url: 'partials/gallery.html?v=20260715-2' },
     { id: 'testimonials', url: 'partials/testimonials.html' },
     { id: 'faq', url: 'partials/faq.html?v=20260715-2' },
-    { id: 'contact', url: 'partials/contact.html' },
-    { id: 'footer', url: 'partials/footer.html' }
+    { id: 'contact', url: 'partials/contact.html?v=20260715-2' },
+    { id: 'footer', url: 'partials/footer.html?v=20260715-2' }
   ];
 
   function inject(id, html) {
