@@ -189,8 +189,8 @@
   transform-origin: left center;
 }
 
-.product-card--previous .product-card__order,
-.product-card--next .product-card__order {
+.product-card--previous .product-card__actions,
+.product-card--next .product-card__actions {
   pointer-events: none;
 }
 
@@ -243,6 +243,8 @@
   color: var(--color-text-light);
   margin-bottom: 1.5rem;
   line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .product-card__price {
@@ -253,33 +255,49 @@
   margin-top: auto;
 }
 
-.product-card__order {
+.product-card__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.product-card__action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
   width: 100%;
+  min-width: 0;
   min-height: 48px;
-  margin-top: 1.4rem;
-  padding: 0.8rem 1.25rem;
+  padding: 0.8rem 0.9rem;
   border-radius: 999px;
-  background: #25d366;
   color: var(--color-white);
   font-family: var(--font-primary);
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   font-weight: 800;
   line-height: 1.2;
-  box-shadow: 0 8px 20px rgba(37,211,102,0.2);
+  text-align: center;
   transition: background-color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
-.product-card__order svg {
+.product-card__order {
+  background: #25d366;
+  box-shadow: 0 8px 20px rgba(37,211,102,0.2);
+}
+
+.product-card__shopee {
+  background: #ee4d2d;
+  box-shadow: 0 8px 20px rgba(238,77,45,0.2);
+}
+
+.product-card__action svg {
   width: 20px;
   height: 20px;
   flex: 0 0 20px;
 }
 
-.product-card__order:active {
+.product-card__action:active {
   transform: translateY(0);
 }
 
@@ -312,6 +330,13 @@
     background: #1da851;
     color: var(--color-white);
     box-shadow: 0 10px 26px rgba(37,211,102,0.32);
+    transform: translateY(-2px);
+  }
+
+  .product-card__shopee:hover {
+    background: #d83d20;
+    color: var(--color-white);
+    box-shadow: 0 10px 26px rgba(238,77,45,0.3);
     transform: translateY(-2px);
   }
 }
@@ -352,6 +377,11 @@
 
   .product-card__order {
     box-shadow: 0 5px 14px rgba(37,211,102,0.18);
+    transition: background-color var(--transition);
+  }
+
+  .product-card__shopee {
+    box-shadow: 0 5px 14px rgba(238,77,45,0.16);
     transition: background-color var(--transition);
   }
 }
@@ -407,5 +437,10 @@
 
   .product-card__body {
     padding: 1.5rem;
+  }
+
+  .product-card__actions {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
   }
 }
