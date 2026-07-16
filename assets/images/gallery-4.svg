@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
   <rect width="400" height="300" fill="#f8f6f0"/>
-  <circle cx="120" cy="150" r="40" fill="#fff" stroke="#d4c5a9" stroke-width="1"/>
-  <circle cx="200" cy="150" r="40" fill="#d4eaf0" stroke="#a8d0e0" stroke-width="1"/>
-  <circle cx="280" cy="150" r="40" fill="#f0e6c0" stroke="#d4c080" stroke-width="1"/>
-  <text x="200" y="270" font-family="Arial" font-size="13" fill="#0f4c81" text-anchor="middle" opacity="0.6">White · Blue · Yellow Salt</text>
+  <circle cx="80" cy="150" r="34" fill="#fff" stroke="#d4c5a9" stroke-width="1"/>
+  <circle cx="160" cy="150" r="34" fill="#e6dcc8" stroke="#c4b595" stroke-width="1"/>
+  <circle cx="240" cy="150" r="34" fill="#f0e6c0" stroke="#d4c080" stroke-width="1"/>
+  <circle cx="320" cy="150" r="34" fill="#d4eaf0" stroke="#a8d0e0" stroke-width="1"/>
+  <text x="200" y="270" font-family="Arial" font-size="12" fill="#0f4c81" text-anchor="middle" opacity="0.6">White | Non Yodium | Yellow | Blue</text>
 </svg>
