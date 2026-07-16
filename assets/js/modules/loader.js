@@ -4,10 +4,10 @@ var Loader = (function () {
   var partials = [
     { id: 'header', url: 'partials/header.html?v=20260716-2' },
     { id: 'hero', url: 'partials/hero.html?v=20260716-3' },
-    { id: 'about', url: 'partials/about.html?v=20260716-6' },
+    { id: 'about', url: 'partials/about.html?v=20260716-9' },
     { id: 'products', url: 'partials/products.html?v=20260715-2' },
     { id: 'advantages', url: 'partials/advantages.html' },
-    { id: 'gallery', url: 'partials/gallery.html?v=20260716-5' },
+    { id: 'gallery', url: 'partials/gallery.html?v=20260716-8' },
     { id: 'testimonials', url: 'partials/testimonials.html?v=20260716-7' },
     { id: 'faq', url: 'partials/faq.html?v=20260716-1' },
     { id: 'contact', url: 'partials/contact.html?v=20260716-2' },
