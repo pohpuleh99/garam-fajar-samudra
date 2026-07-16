@@ -26,6 +26,8 @@
   font-size: 1.15rem;
   line-height: 1.7;
   max-width: 430px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .footer__heading {

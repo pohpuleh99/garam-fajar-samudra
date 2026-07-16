@@ -15,7 +15,7 @@
   text-align: center;
   line-height: 1.2;
   overflow: hidden;
-  transition: box-shadow var(--transition-smooth);
+  transition: color var(--transition), border-color var(--transition), box-shadow var(--transition-smooth);
 }
 
 .btn > * {
@@ -46,6 +46,7 @@
 }
 
 .btn--primary:hover {
+  color: var(--color-primary);
   box-shadow: 0 14px 34px rgba(0,14,23,0.22);
 }
 
@@ -60,6 +61,7 @@
 }
 
 .btn--outline:hover {
+  color: var(--color-white);
   border-color: var(--color-white);
 }
 
@@ -73,5 +75,6 @@
 }
 
 .btn--whatsapp:hover {
+  color: var(--color-white);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
 }

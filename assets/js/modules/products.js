@@ -67,9 +67,12 @@ var Products = (function () {
     price.className = 'product-card__price';
     price.textContent = product.price;
 
+    var actions = document.createElement('div');
+    actions.className = 'product-card__actions';
+
     var orderLink = document.createElement('a');
-    orderLink.className = 'product-card__order';
-    orderLink.href = 'https://wa.me/6281234567890?text=' + encodeURIComponent(product.orderMessage);
+    orderLink.className = 'product-card__action product-card__order';
+    orderLink.href = 'https://wa.me/6281330831266?text=' + encodeURIComponent(product.orderMessage);
     orderLink.target = '_blank';
     orderLink.rel = 'noopener noreferrer';
     orderLink.setAttribute('aria-label', 'Pesan ' + product.name + ' melalui WhatsApp');
@@ -79,16 +82,34 @@ var Products = (function () {
       '</svg>' +
       '<span>Pesan via WhatsApp</span>';
 
+    var shopeeLink = document.createElement('a');
+    shopeeLink.className = 'product-card__action product-card__shopee';
+    shopeeLink.href = product.shopeeUrl;
+    shopeeLink.target = '_blank';
+    shopeeLink.rel = 'noopener noreferrer';
+    shopeeLink.setAttribute('aria-label', 'Pesan ' + product.name + ' melalui Shopee');
+    shopeeLink.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+        '<path d="M5.5 8.5h13l-1 12h-11l-1-12z" />' +
+        '<path d="M9 8.5V6a3 3 0 016 0v2.5" />' +
+        '<path d="M14.5 12c-.55-.45-1.25-.7-2-.7-1.15 0-1.9.5-1.9 1.25 0 1.9 3.9 1 3.9 3.2 0 .85-.8 1.45-2.1 1.45-.85 0-1.65-.25-2.3-.75" />' +
+      '</svg>' +
+      '<span>Pesan via Shopee</span>';
+
     if (isClone) {
       orderLink.tabIndex = -1;
+      shopeeLink.tabIndex = -1;
     }
+
+    actions.appendChild(orderLink);
+    actions.appendChild(shopeeLink);
 
     media.appendChild(image);
     media.appendChild(subtitle);
     body.appendChild(title);
     body.appendChild(description);
     body.appendChild(price);
-    body.appendChild(orderLink);
+    body.appendChild(actions);
     card.appendChild(media);
     card.appendChild(body);
 

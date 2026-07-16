@@ -4,5 +4,5 @@
   <circle cx="200" cy="150" r="60" fill="#c9a838" opacity="0.3"/>
   <circle cx="200" cy="150" r="40" fill="#b09020" opacity="0.4"/>
   <text x="200" y="155" font-family="Arial" font-size="14" fill="#7a5c00" text-anchor="middle" font-weight="bold">YELLOW SALT</text>
-  <text x="200" y="250" font-family="Arial" font-size="11" fill="#7a5c00" text-anchor="middle" opacity="0.6">Fungsional</text>
+  <text x="200" y="250" font-family="Arial" font-size="11" fill="#7a5c00" text-anchor="middle" opacity="0.6">Garam Ikan Kuning</text>
 </svg>
