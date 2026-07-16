@@ -63,7 +63,7 @@ garam-fajar-samudra/
 │   │       ├── navigation.js   active link and smooth scroll
 │   │       └── utils.js        back-to-top button
 │   └── images/                 WebP placeholder images
-├── favicon.svg / favicon.ico
+├── favicon.webp
 ├── apple-touch-icon.png
 ├── robots.txt
 ├── sitemap.xml
