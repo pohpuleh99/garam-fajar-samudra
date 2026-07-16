@@ -46,6 +46,9 @@ var Products = (function () {
     image.src = product.image;
     image.alt = isClone ? '' : product.name + ' - ' + product.subtitle;
     image.loading = 'lazy';
+    image.decoding = 'async';
+    image.width = 1122;
+    image.height = 1402;
     image.draggable = false;
 
     var subtitle = document.createElement('span');
