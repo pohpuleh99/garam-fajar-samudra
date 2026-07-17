@@ -11,7 +11,7 @@ var Loader = (function () {
     { id: 'testimonials', url: 'partials/testimonials.html?v=20260716-7' },
     { id: 'faq', url: 'partials/faq.html?v=20260716-1' },
     { id: 'contact', url: 'partials/contact.html?v=20260716-2' },
-    { id: 'footer', url: 'partials/footer.html?v=20260716-1' }
+    { id: 'footer', url: 'partials/footer.html?v=20260717-2' }
   ];
 
   function inject(id, html) {
@@ -26,7 +26,7 @@ var Loader = (function () {
     var total = partials.length;
 
     partials.forEach(function (p) {
-      fetch(p.url)
+      fetch(p.url, { cache: 'no-cache' })
         .then(function (res) { return res.text(); })
         .then(function (html) {
           inject(p.id, html);
