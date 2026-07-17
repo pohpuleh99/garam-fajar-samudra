@@ -60,10 +60,23 @@
   padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-size: 1.02rem;
   flex-wrap: wrap;
   gap: var(--space-sm);
+}
+
+.footer__credits {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  text-align: left;
+}
+
+.footer__credits li::marker {
+  color: var(--color-accent-soft);
 }
 
 @media (max-width: 768px) {
@@ -73,6 +86,13 @@
   }
   .footer__bottom {
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .footer__credits {
+    padding-left: 0;
+    list-style-position: inside;
     text-align: center;
   }
 }
